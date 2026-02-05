@@ -3,9 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <title>365 Receitas com Ovo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>App 365 Receitas com Ovo</h1>
-  <p>App iniciado com sucesso.</p>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="https://i.imgur.com/MTKD3qI.png" alt="Ovo">
+      <div>
+        <h1>365 Receitas</h1>
+        <p>com Ovos • Área de Membros</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- BEM VINDO -->
+    <section class="bem-vindo">
+      <h2>Bem-vindo(a) à sua área exclusiva!</h2>
+
+      <img src="https://i.imgur.com/MTKD3qI.png" alt="Apresentação">
+
+      <a href="#" class="botao-grande" id="material1">
+        📘 Acessar Material – Parte 1
+      </a>
+
+      <a href="#" class="botao-grande" id="material2">
+        📘 Acessar Material – Parte 2
+      </a>
+    </section>
+
+    <!-- CATEGORIAS -->
+    <h3 style="text-align:center;margin-top:30px;">
+      Escolha uma categoria de receitas
+    </h3>
+
+    <section class="categorias">
+      <div class="categoria" onclick="abrirCategoria('carne_moida')">
+        <span>🥩</span>
+        <p>Carne Moída</p>
+      </div>
+
+      <div class="categoria" onclick="abrirCategoria('airfryer')">
+        <span>🍟</span>
+        <p>Airfryer</p>
+      </div>
+
+      <div class="categoria" onclick="abrirCategoria('arroz')">
+        <span>🍚</span>
+        <p>Arroz</p>
+      </div>
+
+      <div class="categoria" onclick="abrirCategoria('frango')">
+        <span>🍗</span>
+        <p>Frango</p>
+      </div>
+
+      <div class="categoria" onclick="abrirCategoria('lanches')">
+        <span>🥪</span>
+        <p>Lanches</p>
+      </div>
+
+      <div class="categoria" onclick="abrirCategoria('macarrao')">
+        <span>🍝</span>
+        <p>Macarrão</p>
+      </div>
+
+      <div class="categoria" onclick="abrirCategoria('sucos')">
+        <span>🥤</span>
+        <p>Sucos</p>
+      </div>
+
+      <div class="categoria" onclick="abrirCategoria('bolos')">
+        <span>🍰</span>
+        <p>Bolos Caseiros</p>
+      </div>
+
+      <div class="categoria" onclick="abrirCategoria('fit')">
+        <span>🥗</span>
+        <p>Fit</p>
+      </div>
+    </section>
+
+    <!-- UPSELL / DESAFIO -->
+    <section style="margin-top:60px;text-align:center;">
+      <h2>Antes de ver todas as receitas…</h2>
+
+      <img 
+        src="https://i.imgur.com/vglHLCy.png"
+        style="width:100%;max-width:500px;border-radius:16px;margin-top:20px;"
+      >
+
+      <a href="#" class="botao-grande" style="background:#e53935;">
+        🔥 Ver Informação Importante
+      </a>
+
+      <p style="color:#c62828;margin-top:10px;">
+        Esta informação é essencial antes de começar.
+      </p>
+    </section>
+
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-conteudo">
+      <button class="fechar" onclick="fecharModal()">×</button>
+      <div id="conteudoModal"></div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+
 </body>
 </html>
